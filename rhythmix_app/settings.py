@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'djoser', 
     'users', 
+    'playlists',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
