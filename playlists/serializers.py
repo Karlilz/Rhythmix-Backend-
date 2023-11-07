@@ -1,6 +1,5 @@
 from .models import Playlist
 from rest_framework import serializers
-from django.contrib.auth.models import User, Group
 
 class PlaylistSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
