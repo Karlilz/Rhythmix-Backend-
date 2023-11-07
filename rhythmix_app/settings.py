@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'playlists',
     'rest_framework',
     'rest_framework.authtoken', 
-
 ]
 
 MIDDLEWARE = [
