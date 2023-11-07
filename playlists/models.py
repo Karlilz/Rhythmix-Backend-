@@ -1,6 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
 
+# Create your models here.
+#equivelent to models/schema in Mongoose 
 
 class Playlist(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100) 
+    song1 = models.CharField(max_length=100) 
+    song2 = models.CharField(max_length=100) 
+    song3 = models.CharField(max_length=100) 
+    song4 = models.CharField(max_length=100) 
