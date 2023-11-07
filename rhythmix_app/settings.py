@@ -9,11 +9,11 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+from pathlib import Path
 import os
 import dj_database_url
-
-from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv() #gives file access to environment variables 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +29,6 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = True if os.environ['MODE'] == 'dev' else False
 
 ALLOWED_HOSTS = []
-CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -45,6 +44,8 @@ INSTALLED_APPS = [
     'users', 
     'playlists',
     'rest_framework',
+    'rest_framework.authtoken', 
+
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
