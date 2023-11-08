@@ -7,7 +7,7 @@ class PLaylistList(generics.ListCreateAPIView):
     serializer_class = PlaylistSerializer
 
     def get (self, request, *args, **kwargs):
-        queryset = Playlist.objects.get(owner=request.user)
+        queryset = Playlist.objects.all()
         serializer = PlaylistSerializer(queryset, many=True)
         return self.list(request, *args, **kwargs)
 
