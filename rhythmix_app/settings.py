@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'users', 
     'playlists',
     'rest_framework',
-    'rest_framework.authtoken', 
+    #'rest_framework.authtoken', 
 ]
 
 MIDDLEWARE = [
@@ -134,7 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         # What we'll use for our API
-        "rest_framework.authentication.TokenAuthentication",
+        #rest_framework.authentication.TokenAuthentication,
         # What we'll use for the browseable API
         "rest_framework.authentication.SessionAuthentication",
         # Basic Authentication should be removed in production
